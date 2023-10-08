@@ -1,11 +1,18 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+import PostListView from '../views/PostListView.vue'
+import PostDetailView from '../views/PostDetailView.vue'
+/* eslint-disable */
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/post',
+    name: 'post',
+    component: PostListView
+  },
+  {
+    path: '/post/:id',
+    name: 'postdetail',
+    component: PostDetailView
   },
   {
     path: '/about',
