@@ -11,6 +11,7 @@
 </template>
 
 <script lang="ts">
+import axios from 'axios';
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -18,7 +19,7 @@ export default defineComponent({
   props: {
     msg: String
   },
-  data () {
+  data() {
     return {
       posts: []
     }
@@ -27,13 +28,13 @@ export default defineComponent({
     // Aquí puedes hacer una solicitud HTTP a tu API para obtener la lista de posts
     // Utiliza Axios o la librería que prefieras
     // Ejemplo de solicitud ficticia:
-    // axios.get('http://localhost:3000/posts')
-    //   .then(response => {
-    //     this.posts = response.data;
-    //   })
-    //   .catch(error => {
-    //     console.error(error);
-    //   });
+       axios.get('http://localhost:8000/api/posts')
+       .then(response => {
+         this.posts = response.data;
+       })
+       .catch(error => {
+         console.error(error);
+       });
   }
 })
 </script>
