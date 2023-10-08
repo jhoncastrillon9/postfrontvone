@@ -5,6 +5,11 @@ import PostDetailView from '../views/PostDetailView.vue'
 /* eslint-disable */
 const routes: Array<RouteRecordRaw> = [
   {
+    path: '/',
+    name: '',
+    component: PostListView
+  },
+  {
     path: '/post',
     name: 'post',
     component: PostListView
