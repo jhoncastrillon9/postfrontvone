@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <h1>{{ msg }} </h1>
+  <div>    
     <div v-if="post">
       <h2>{{ post.title }}</h2>
       <p>{{ post.content }}</p>
-      <img :src="post.imageUrl" alt="Imagen del Post" />
+      <img :src="post.url" alt="Imagen del Post" />
+      <p>{{ post.user }}</p>
+      <p>{{ post.likes }}</p>
+      <p>{{ post.location }}</p>
     </div>
     <router-link to="/post">Volver al listado de post</router-link>
   </div>
