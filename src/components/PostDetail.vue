@@ -6,7 +6,7 @@
       <div class="icon-container">
         <div class="icon">
           <i class="fas fa-thumbs-up"> </i>
-          <span>     {{ post.likes }} </span>        
+          <span>   {{ post.likes }} </span>        
         </div>
         <div class="icon">
           <i class="fas fa-map-marker-alt"></i> 
